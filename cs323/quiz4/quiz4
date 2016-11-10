@@ -1,0 +1,10 @@
+1.
+if {the has Both Child}
+	lowest = {original parent of the key which will replace the old key}
+	else if {has Only One Child OR is Leaf}
+		lowest = {the parent of this key}
+2.
+AVL: 
+After deleting a node, we identify if it has child(ren) and apply approprate algorithm to get it removed; after recursively balance its parents if the node (and the sub tree till this point) is not balanced. We using rotations to balance the nodes in all four cases.
+
+Black and Red tree: We first remove it using the same procedure and then balance it; We first identify if it is a double black case; a series of rotations is then performed.

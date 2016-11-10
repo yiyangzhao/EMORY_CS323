@@ -1,0 +1,16 @@
+Quiz
+
+Let S be the set of all vertices on the shortest path found by Dijkstra’s algorithm.
+Prove that the distances[u] is the minimum length between the vertex u and the target vertex t.
+Base case
+	When |S| = 1, it is true.
+Induction case
+	Assume that it is true for |S| = k > 1.
+	V is the next vertex that is added to S
+	We have an edge t -> v
+	p(v) = the shortest path u->t + t->v
+	Any other path from u to v have length >=p(v)
+	Let x->y be the first edge S->y, P' is a subpath ->x
+	length(P)>=length(P')+length(x->y)>=dis(x)+length(x->y) >= p(y) >= p(v)
+	So Dijkstra choose v before y
+	So the resulting path is shortest	

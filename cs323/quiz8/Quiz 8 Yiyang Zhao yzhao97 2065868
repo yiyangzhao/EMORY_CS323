@@ -1,0 +1,24 @@
+Quiz 8 Yiyang Zhao yzhao97 2065868
+Proof: max-flow equv. min-cut
+
+
+
+for any edges connecting two sets, the maxium flow <= the capacity of the total of those edges (Max flow M< Capacity of cut)
+
+Thus the max flow should <= any possible cut.
+
+For a maxflow in the network we can construct a cut that follows:
+
+we seperate all the verticies as 1)used and reached in the maxflow 2)not reached
+
+We construct a cut that seperate all verticies in two sets, S in one and T in another
+
+let C be the capacity of the cut
+
+C = sum (c(forward edge))
+
+for each edge goes from set with S to set with T, f=c
+
+for each going back T set to S set, f=0
+
+So C(minimum cut) = max flow
